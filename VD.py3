@@ -52,7 +52,7 @@ ASCII_ART = f"""
 {C_PURPLE}{C_BOLD}
 █░█ █▀▄
 █░█ █░█       MIRROR
-░▀░ ▀▀░       V8.2
+░▀░ ▀▀░       sites.web
 {C_CYAN}         >> MIRRORING PROTOCOL v3.1 | ETERNAL EDITION <<
 {C_WHITE}         >> STATUS: TERMINAL RECON ATIVO <<
 """
@@ -101,7 +101,7 @@ class VDMirror:
 
         assets_urls = list(set(assets_urls))
         total_assets = len(assets_urls)
-        print(f"{C_GREEN}[+] PROTOCOLO INICIADO. SALVANDO EM DOWNLOADS...")
+        print(f"{C_GREEN}[+] PROTOCOLO INICIADO. SALVANDO...")
 
         try:
             with zipfile.ZipFile(self.final_path,'w',zipfile.ZIP_DEFLATED) as zipf:
@@ -135,7 +135,7 @@ def main():
     print(f"{C_CYAN}F - FLASH (Rápido, apenas estrutura)")
     print(f"{C_CYAN}N - COMPLETO (Lento, baixa todas as mídias)")
     mode = input(f"{C_CYAN}ESCOLHA [f/n]: {C_WHITE}").lower().strip()
-    print(f"\n{C_RED}{C_BOLD}VOCÊ SEJA ESPELHAR TODA A PARTE VIZUAL DO ALVO{C_END}")
+    print(f"\n{C_RED}{C_BOLD}VOCÊ DESEJA ESPELHAR TODA A PARTE VIZUAL DO ALVO{C_END}")
     confirm = input(f"{C_CYAN}[y/n]: {C_WHITE}").lower().strip()
     if confirm=='y':
         VDMirror(target,mode).run()
